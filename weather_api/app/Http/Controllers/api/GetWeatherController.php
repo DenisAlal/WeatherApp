@@ -13,7 +13,9 @@ class GetWeatherController extends Controller
         $lat = $request->input('lat');
         $lon = $request->input('lon');
         $lang = $request->input('lang');
-        $url = "https://api.openweathermap.org/data/2.5/weather?lat=".$lat."&lon=".$lon."&lang=".$lang."&appid=8c4d673ca47a9bd9ff436dcdee56e3bf";
+        $units = $request->input('units');
+        $url = "https://api.openweathermap.org/data/2.5/forecast?lat=".$lat."&lon=".$lon."&units=".$units."&lang=".$lang."&appid=8c4d673ca47a9bd9ff436dcdee56e3bf";
+        
         $response = Http::post($url);
 
         if ($response->successful()) {

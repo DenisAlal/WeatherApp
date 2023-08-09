@@ -5,7 +5,7 @@
   font-size: calc(10px + 2vmin);
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 145px auto 165px;
   gap: 40px 30px;
   grid-template-areas:
 		" header header header"
@@ -23,17 +23,152 @@
 }
 .header {
   grid-area: header;
-  background: black;
+  display: flex;
+  justify-content: space-between;
+  .select_city {
+    width: 480px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .select_city > div {
+    width: 375px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .cityName {
+    font-size: 50px;
+  }
+  .buttonsGroup {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    .changeCity {
+      cursor: pointer;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+    .cordGet {
+      cursor: pointer;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      margin-left: 25px;
+    }
+  }
+
+  .select_units {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .switchUnit {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      margin-right: 75px;
+
+      .sizeUnitsText {
+        font-size: 16px;
+        margin-right: 3px;
+      }
+      .groupButtonsSelectUnits {
+        height: 40px;
+        width: 50px;
+      }
+    }
+
+  }
 }
 
+
+
+
+.temp {
+  font-size: 150px;
+  margin-left: 20px;
+}
+
+.tempBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.descriptionBlock {
+  display: flex;
+  justify-content: center;
+
+}
+.descriptionBlock div {
+  font-size: 25px;
+}
 .bodyWeather {
   grid-area: bodyWeather;
-  background: greenyellow;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
 }
 
 .footer {
   grid-area: footer;
-  background: yellow;
+  display: grid;
+  grid-template-columns: 100px auto auto auto auto 100px;
+  grid-template-areas:
+		" . wind pressure humidity rainChance .";
+ text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  .flexBlock {
+    display: flex;
+    flex-direction: column;
+  }
+  .wind div,
+  .pressure div,
+  .humidity div,
+  .rainChance div {
+    margin-top: 5px;
+  }
+  .wind {
+    grid-area: wind;
+  }
+  .pressure {
+    grid-area: pressure;
+  }
+  .humidity {
+    grid-area: humidity;
+  }
+  .rainChance {
+    grid-area: rainChance;
+  }
+
 }
+
+
+
+
+.lbutton {
+  border-radius: 7px 0 0 7px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  color: rgba(255, 255, 255, 0.20);
+}
+.rbutton {
+  border-radius: 0 7px 7px 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  color: rgba(255, 255, 255, 0.20);
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.20);
+  color: white;
+}
+
 
