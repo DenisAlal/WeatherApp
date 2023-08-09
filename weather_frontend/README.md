@@ -1,10 +1,8 @@
-# Getting Started with Create React App
+# Запуск weather_front
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1.Available Scripts
 
-## Available Scripts
-
-In the project directory, you can run:
+2.dwa
 
 ### `npm start`
 
