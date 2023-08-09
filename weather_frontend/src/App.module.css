@@ -2,7 +2,7 @@
   background-color: #498CEC;
   min-height: 100vh;
   color: white;
-  font-size: calc(10px + 2vmin);
+
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: 145px auto 165px;
@@ -171,4 +171,58 @@
   color: white;
 }
 
+.modal {
+  position: fixed;
+  width: 500px;
+  height: 80px;
+  display: flex;
+  margin-left: 100px;
+  margin-top: 120px;
+  z-index: 999;
+  background: white;
 
+}
+.modalContent {
+  display: flex;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.modalContent input {
+  flex-grow: 1;
+  border: none;
+  font-size: 20px;
+
+}
+.modalContent input:focus {
+  outline: none;
+}
+
+.modalContent button {
+  background: transparent;
+  color: #1086FF;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  margin-right: 15px;
+
+}
+.modalContent button:hover {
+  transition: 0.2s;
+  color: #156ffd;
+}
+
+@media (width <= 765px) {
+  .modal {
+    width: 370px;
+    height: 60px;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 120px;
+  }
+  .App {
+    min-width: 600px;
+  }
+}

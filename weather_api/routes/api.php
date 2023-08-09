@@ -22,5 +22,7 @@ use App\Http\Controllers\api\GetWeatherController;
 
 Route::controller(GetWeatherController::class)->group(function () {
     Route::post('weather', 'getWeather');
+    Route::post('weatherFromName', 'getWeatherFromName');
+
 
 });
