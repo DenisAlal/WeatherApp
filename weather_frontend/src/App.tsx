@@ -27,14 +27,15 @@ function App() {
                 },
                 (error) => {
                     console.error('Ошибка получения геопозиции:', error);
-                    localStorage.setItem("latitude", JSON.stringify(55.0415));
-                    localStorage.setItem("longitude", JSON.stringify(82.9346));
+                    alert('Ошибка получения геопозиции, пользователь запретил получение данных. ' +
+                        '\nВыведен стандартно указанный город.')
+                    postData(55.0415, 82.9346)
                 }
             );
         } else {
             console.error('Геолокация не поддерживается');
-            localStorage.setItem("latitude", JSON.stringify(55.0415));
-            localStorage.setItem("longitude", JSON.stringify(82.9346));
+            alert("Геолокация не поддерживаетс")
+            postData(55.0415, 82.9346)
         }
     }
 
